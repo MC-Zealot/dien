@@ -111,7 +111,7 @@ def train(
         batch_size = 128,
         maxlen = 100,
         test_iter = 100,
-        save_iter = 100,
+        save_iter = 1000,
         model_type = 'DNN',
 	seed = 2,
 ):
@@ -147,7 +147,7 @@ def train(
         sess.run(tf.global_variables_initializer())
         sess.run(tf.local_variables_initializer())
         sys.stdout.flush()
-        print('                                                                                      test_auc: %.4f ---- test_loss: %.4f ---- test_accuracy: %.4f ---- test_aux_loss: %.4f' % eval(sess, test_data, model, best_model_path))
+        print('test_auc: %.4f ---- test_loss: %.4f ---- test_accuracy: %.4f ---- test_aux_loss: %.4f' % eval(sess, test_data, model, best_model_path))
         sys.stdout.flush()
 
         start_time = time.time()
@@ -168,7 +168,7 @@ def train(
                 if (iter % test_iter) == 0:
                     print('iter: %d ----> train_loss: %.4f ---- train_accuracy: %.4f ---- tran_aux_loss: %.4f' % \
                                           (iter, loss_sum / test_iter, accuracy_sum / test_iter, aux_loss_sum / test_iter))
-                    print('                                                                                          test_auc: %.4f ----test_loss: %.4f ---- test_accuracy: %.4f ---- test_aux_loss: %.4f' % eval(sess, test_data, model, best_model_path))
+                    print('test_auc: %.4f ----test_loss: %.4f ---- test_accuracy: %.4f ---- test_aux_loss: %.4f' % eval(sess, test_data, model, best_model_path))
                     loss_sum = 0.0
                     accuracy_sum = 0.0
                     aux_loss_sum = 0.0

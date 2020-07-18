@@ -8,3 +8,6 @@ local_train_splitByUser
 mid_voc.pkl
 reviews-info
 uid_voc.pkl
+dnn_best_model/
+dnn_save_path/
+*.pyc
