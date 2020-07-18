@@ -1,0 +1,10 @@
+*.xml
+.idea/
+venv/
+cat_voc.pkl
+item-info
+local_test_splitByUser
+local_train_splitByUser
+mid_voc.pkl
+reviews-info
+uid_voc.pkl
