@@ -1,3 +1,5 @@
+tensorflow 1.4
+python 2.7
 # Deep Interest Evolution Network for Click-Through Rate Prediction
 https://arxiv.org/abs/1809.03672
 ## prepare data
